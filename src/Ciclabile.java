@@ -5,8 +5,23 @@ public class Ciclabile {
 
     private int count;
 
+    private int indiceScrittura;
+
     public Ciclabile(int[] array) {
         this.array = array;
+    }
+
+    public Ciclabile(){
+        this.array = new int[10];
+    }
+
+    public void addElemento(int elemento){
+        if(indiceScrittura < array.length){
+            this.array[indiceScrittura] = elemento;
+            indiceScrittura++;
+        }else{
+            System.out.println("Elenco completo");
+        }
     }
 
     public int getElementoSuccessivo() {
